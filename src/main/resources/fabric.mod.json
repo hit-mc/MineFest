@@ -1,35 +1,32 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "minefest",
   "version": "${version}",
-
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "MineFest",
+  "description": "A mining scoreboard plugin.",
   "authors": [
-    "Me!"
+    "trueKeuin"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://keuin.cc",
+    "sources": "https://github.com/keuin/MineFest"
   },
-
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
-
+  "license": "AGPL-3.0",
+  "icon": "assets/minefest/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "com.keuin.minefest.fabric.MineFest"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "minefest.mixins.json"
   ],
 
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.16.x"
+    "minecraft": "1.15.x"
   },
   "suggests": {
     "another-mod": "*"
