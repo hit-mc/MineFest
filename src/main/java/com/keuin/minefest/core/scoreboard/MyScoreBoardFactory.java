@@ -11,7 +11,7 @@ public class MyScoreBoardFactory<T extends Number> {
     private String title = "scoreboard";
 
     public MyScoreBoard<T> build() {
-        if ()
+        return null;
     }
 
     public MyScoreBoardFactory<T> withInitialScore(Map<UUID, T> scoreMap) {

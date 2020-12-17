@@ -15,8 +15,8 @@
   "icon": "assets/minefest/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "com.keuin.minefest.fabric.MineFest"
+    "server": [
+      "com.keuin.minefest.fabric.events.MineFestInitializer"
     ]
   },
   "mixins": [
