@@ -1,12 +1,13 @@
 package com.keuin.minefest.core.handler;
 
+import com.keuin.minefest.core.dispatch.EventHandler;
 import com.keuin.minefest.core.scoreboard.Scoreboard;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.time.ZonedDateTime;
 
-public interface Competition {
+public interface Competition extends EventHandler {
     /**
      * Get the competition's programmatic name.
      *

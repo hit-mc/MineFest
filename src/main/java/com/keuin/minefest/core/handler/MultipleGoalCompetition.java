@@ -1,5 +1,6 @@
 package com.keuin.minefest.core.handler;
 
+import com.keuin.minefest.core.event.Event;
 import com.keuin.minefest.core.handler.goal.CompetitionGoal;
 import com.keuin.minefest.core.scoreboard.Scoreboard;
 import org.jetbrains.annotations.NotNull;
@@ -38,12 +39,17 @@ public class MultipleGoalCompetition implements Competition {
     }
 
     @Override
-    public void setScoreboard(@NotNull Scoreboard scoreboard) {
+    public <T extends Number> void setScoreboard(@NotNull Scoreboard<T> scoreboard) {
         throw new RuntimeException("Not implemented.");
     }
 
     @Override
     public void setScoreboard() {
+        throw new RuntimeException("Not implemented.");
+    }
+
+    @Override
+    public void handleEvent(Event event) {
         throw new RuntimeException("Not implemented.");
     }
 }
