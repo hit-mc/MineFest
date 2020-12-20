@@ -16,7 +16,7 @@
   "environment": "*",
   "entrypoints": {
     "server": [
-      "com.keuin.minefest.fabric.events.MineFestInitializer"
+      "com.keuin.minefest.fabric.MineFestInitializer"
     ]
   },
   "mixins": [
