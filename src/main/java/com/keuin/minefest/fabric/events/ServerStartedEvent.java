@@ -17,7 +17,6 @@ public class ServerStartedEvent implements ServerLifecycleEvents.ServerStarted {
 
     @Override
     public void onServerStarted(MinecraftServer minecraftServer) {
-
         final int SLOT_LIST = 0; // show in player list
         final int SLOT_SIDEBAR = 1;
         final int SLOT_BELOW_NAME = 2;
@@ -35,9 +34,9 @@ public class ServerStartedEvent implements ServerLifecycleEvents.ServerStarted {
                             new LiteralText("displayName"),
                             ScoreboardCriterion.RenderType.INTEGER
                     );
+                    scoreboard.addScoreboardObjective(objective);
                     scoreboard.setObjectiveSlot(SLOT_SIDEBAR, objective);
                     while (true) {
-                        scoreboard.addScoreboardObjective(objective);
                         ScoreboardPlayerScore score = new ScoreboardPlayerScore(scoreboard, objective, "trueKeuin");
                         score.setScore(counter++);
                         scoreboard.updateScore(score);
@@ -48,6 +47,6 @@ public class ServerStartedEvent implements ServerLifecycleEvents.ServerStarted {
                     System.out.print("Quitting...");
                 }
             }
-        }).start();
+        });
     }
 }
