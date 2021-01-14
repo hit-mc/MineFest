@@ -13,8 +13,8 @@ public abstract class IntegerScoreboard implements Scoreboard<Integer> {
     private final Map<UUID, Integer> scoreMap;
     private final String title;
     private final Integer defaultScore;
-    private final PlayerIdProvider playerIdProvider;
-    private MinecraftServer minecraftServer = null;
+    private transient PlayerIdProvider playerIdProvider;
+    private transient MinecraftServer minecraftServer = null;
 
     IntegerScoreboard(Map<UUID, Integer> initialScoreMap, String title, int defaultScore, PlayerIdProvider playerIdProvider) {
         scoreMap = new HashMap<>(initialScoreMap);
@@ -24,7 +24,6 @@ public abstract class IntegerScoreboard implements Scoreboard<Integer> {
     }
 
     private void updateDisplay() {
-
     }
 
     /**

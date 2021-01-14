@@ -8,6 +8,7 @@ import org.jetbrains.annotations.Nullable;
 import java.time.ZonedDateTime;
 
 public interface Competition extends EventHandler {
+
     /**
      * Get the competition's programmatic name.
      *
@@ -22,6 +23,13 @@ public interface Competition extends EventHandler {
      */
     String getDisplayName();
 
+    /**
+     * Get the state of this competition.
+     *
+     * @return the state.
+     */
+    CompetitionState getState();
+
     @Nullable ZonedDateTime getStartTime();
 
     @Nullable ZonedDateTime getEndTime();
@@ -31,7 +39,7 @@ public interface Competition extends EventHandler {
      *
      * @param scoreboard the scoreboard.
      */
-    <T extends Number> void setScoreboard(@NotNull Scoreboard<T> scoreboard);
+    void setScoreboard(@NotNull Scoreboard<Integer> scoreboard);
 
     /**
      * Clear the scoreboard.

@@ -29,6 +29,11 @@ public class MultipleGoalCompetition implements Competition {
     }
 
     @Override
+    public CompetitionState getState() {
+        throw new RuntimeException("Not implemented.");
+    }
+
+    @Override
     public @Nullable ZonedDateTime getStartTime() {
         throw new RuntimeException("Not implemented.");
     }
@@ -39,7 +44,7 @@ public class MultipleGoalCompetition implements Competition {
     }
 
     @Override
-    public <T extends Number> void setScoreboard(@NotNull Scoreboard<T> scoreboard) {
+    public void setScoreboard(@NotNull Scoreboard<Integer> scoreboard) {
         throw new RuntimeException("Not implemented.");
     }
 
